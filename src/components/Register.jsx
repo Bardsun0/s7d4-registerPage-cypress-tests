@@ -114,7 +114,7 @@ function Register() {
       <CardBody>
         <Form className="red" onSubmit={handleSubmit}>
           <FormGroup>
-            <Label for="ad">Ad:</Label>
+            <Label className="yellow" for="ad">Ad:</Label>
             <Input
               id="ad"
               name="ad"
@@ -132,7 +132,7 @@ function Register() {
             )}
           </FormGroup>
           <FormGroup>
-            <Label for="soyad">Soyad:</Label>
+            <Label className="yellow" for="soyad">Soyad:</Label>
             <Input
               id="soyad"
               name="soyad"
@@ -150,7 +150,7 @@ function Register() {
             )}
           </FormGroup>
           <FormGroup>
-            <Label for="email">Email:</Label>
+            <Label className="yellow" for="email">Email:</Label>
             <Input
               id="email"
               name="email"
@@ -168,7 +168,7 @@ function Register() {
             )}
           </FormGroup>
           <FormGroup>
-            <Label for="password">Password</Label>
+            <Label className="yellow" for="password">Password</Label>
             <Input
               id="password"
               name="password"
