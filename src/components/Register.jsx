@@ -12,6 +12,7 @@ import {
   Input,
   Label,
 } from "reactstrap";
+import "./Register.css";
 
 const initialValues = {
   ad: "",
@@ -111,7 +112,7 @@ function Register() {
     <Card>
       <CardHeader>Kayıt Ol</CardHeader>
       <CardBody>
-        <Form onSubmit={handleSubmit}>
+        <Form className="red" onSubmit={handleSubmit}>
           <FormGroup>
             <Label for="ad">Ad:</Label>
             <Input
@@ -124,7 +125,11 @@ function Register() {
               invalid={errors.ad}
               data-cy="ad-input"
             />
-            {errors.ad && <FormFeedback data-cy="error-message">{errorMessages.ad}</FormFeedback>}
+            {errors.ad && (
+              <FormFeedback data-cy="error-message">
+                {errorMessages.ad}
+              </FormFeedback>
+            )}
           </FormGroup>
           <FormGroup>
             <Label for="soyad">Soyad:</Label>
@@ -138,7 +143,11 @@ function Register() {
               invalid={errors.soyad}
               data-cy="soyad-input"
             />
-            {errors.soyad && <FormFeedback data-cy="error-message">{errorMessages.soyad}</FormFeedback>}
+            {errors.soyad && (
+              <FormFeedback data-cy="error-message">
+                {errorMessages.soyad}
+              </FormFeedback>
+            )}
           </FormGroup>
           <FormGroup>
             <Label for="email">Email:</Label>
@@ -152,7 +161,11 @@ function Register() {
               invalid={errors.email}
               data-cy="email-input"
             />
-            {errors.email && <FormFeedback data-cy="error-message">{errorMessages.email}</FormFeedback>}
+            {errors.email && (
+              <FormFeedback data-cy="error-message">
+                {errorMessages.email}
+              </FormFeedback>
+            )}
           </FormGroup>
           <FormGroup>
             <Label for="password">Password</Label>
@@ -167,10 +180,14 @@ function Register() {
               data-cy="password-input"
             />
             {errors.password && (
-              <FormFeedback data-cy="error-message">{errorMessages.password}</FormFeedback>
+              <FormFeedback data-cy="error-message">
+                {errorMessages.password}
+              </FormFeedback>
             )}
           </FormGroup>
-          <Button disabled={!isValid} data-cy="submit-button">Kayıt Ol</Button>
+          <Button disabled={!isValid} data-cy="submit-button">
+            Kayıt Ol
+          </Button>
         </Form>
       </CardBody>
       {id && <CardFooter data-cy="response-message">ID: {id}</CardFooter>}
